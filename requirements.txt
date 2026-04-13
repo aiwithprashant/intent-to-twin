@@ -1,0 +1,6 @@
+openai 
+pydantic 
+spacy
+transformers 
+accelerate 
+huggingface_hub
