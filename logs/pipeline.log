@@ -4,3 +4,24 @@
 2026-04-13 17:06:04,227 | INFO | pipeline | [DONE] m2
 2026-04-13 17:06:04,227 | INFO | pipeline | [RUN] m3
 2026-04-13 17:06:04,228 | INFO | pipeline | [DONE] m3
+2026-04-13 17:29:51,628 | INFO | pipeline | [SKIP] m1 already completed
+2026-04-13 17:29:51,629 | INFO | pipeline | [SKIP] m2 already completed
+2026-04-13 17:29:51,630 | INFO | pipeline | [SKIP] m3 already completed
+2026-04-13 17:39:21,716 | INFO | ========== STAGE: m1 ==========
+2026-04-13 17:39:21,717 | INFO | [SKIP] m1 already completed
+2026-04-13 17:40:30,864 | INFO | ========== STAGE: m1 ==========
+2026-04-13 17:40:30,865 | INFO | [START] m1
+2026-04-13 17:40:30,866 | INFO | [M1] Output directory: /workspace/intent-to-twin/outputs/m1
+2026-04-13 17:40:30,867 | INFO | [M1] Input text: a room with a door, window and pipe
+2026-04-13 17:40:30,867 | ERROR | [FAIL] m1: '\n  "objects"'
+2026-04-13 17:41:28,309 | INFO | ========== STAGE: m1 ==========
+2026-04-13 17:41:28,310 | INFO | [START] m1
+2026-04-13 17:41:28,311 | INFO | [M1] Output directory: /workspace/intent-to-twin/outputs/m1
+2026-04-13 17:41:28,311 | INFO | [M1] Input text: a room with a door, window and pipe
+2026-04-13 17:41:28,311 | INFO | [M1] Calling LLM...
+2026-04-13 17:41:35,525 | WARNING | [M1] LLM failed: HF model did not return valid JSON
+2026-04-13 17:41:35,526 | INFO | [M1] Switching to fallback parser
+2026-04-13 17:41:35,535 | INFO | [M1] Schema validation passed
+2026-04-13 17:41:35,539 | INFO | [SAVE] JSON saved at: /workspace/intent-to-twin/outputs/m1/scene_graph.json
+2026-04-13 17:41:35,539 | INFO | [M1] Scene graph saved successfully
+2026-04-13 17:41:35,540 | INFO | [DONE] m1

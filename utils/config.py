@@ -1,6 +1,8 @@
 import yaml
 from pathlib import Path
 from typing import Dict, Any
+from pathlib import Path
+
 
 
 class Config:
@@ -23,3 +25,6 @@ class Config:
 
     def __getitem__(self, item):
         return self.data[item]
+    
+    def resolve_path(base: str, relative: str) -> str:
+        return str(Path(base) / relative)

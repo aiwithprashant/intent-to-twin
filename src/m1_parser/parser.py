@@ -30,22 +30,37 @@ class IntentParser:
         self.output_dir.mkdir(parents=True, exist_ok=True)
         output_file = self.output_dir / "scene_graph.json"
 
+        self.logger.info(f"[M1] Output directory: {self.output_dir.resolve()}")
+
         if output_file.exists():
-            self.logger.info("M1 output exists, skipping")
+            self.logger.info("[M1] Output already exists → skipping")
             return
+
+        self.logger.info(f"[M1] Input text: {text}")
 
         prompt = PROMPT_TEMPLATE.format(input_text=text)
 
         try:
-            self.logger.info("Running LLM parser")
+            self.logger.info("[M1] Calling LLM...")
+
             result = self.llm.generate(prompt)
 
+            self.logger.debug(f"[M1] Raw LLM output: {result}")
+
         except Exception as e:
-            self.logger.warning(f"LLM failed: {e}, using fallback")
+            self.logger.warning(f"[M1] LLM failed: {e}")
+            self.logger.info("[M1] Switching to fallback parser")
+
             result = fallback_parse(text)
 
-        graph = SceneGraph(**result)
+        try:
+            graph = SceneGraph(**result)
+            self.logger.info("[M1] Schema validation passed")
 
-        save_json(graph.dict(), output_file)
+        except Exception as e:
+            self.logger.error(f"[M1] Schema validation failed: {e}")
+            raise
 
-        self.logger.info(f"Scene graph saved: {output_file}")
+        save_json(graph.dict(), output_file, logger=self.logger)
+
+        self.logger.info(f"[M1] Scene graph saved successfully")

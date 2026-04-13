@@ -2,12 +2,15 @@ import json
 from pathlib import Path
 
 
-def save_json(data, path: str):
+def save_json(data, path: str, logger=None):
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
 
     with open(path, "w") as f:
         json.dump(data, f, indent=4)
+
+    if logger:
+        logger.info(f"[SAVE] JSON saved at: {path.resolve()}")
 
 
 def load_json(path: str):

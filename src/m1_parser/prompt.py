@@ -4,17 +4,17 @@ Convert the following text into a structured scene graph JSON.
 Return ONLY valid JSON.
 
 Schema:
-{
+{{
   "objects": [
-    {"id": "obj_0", "name": "", "attributes": {}}
+    {{"id": "obj_0", "name": "", "attributes": {{}}}}
   ],
   "relations": [
-    {"subject": "", "predicate": "", "object": ""}
+    {{"subject": "", "predicate": "", "object": ""}}
   ],
-  "confidence": {
+  "confidence": {{
     "obj_0": 0.0
-  }
-}
+  }}
+}}
 
 Text:
 "{input_text}"

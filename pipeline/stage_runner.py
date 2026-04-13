@@ -5,12 +5,18 @@ class StageRunner:
         self.logger = logger
 
     def run_stage(self, name, func):
+        self.logger.info(f"========== STAGE: {name} ==========")
+
         if self.resume.stage_done(name):
             self.logger.info(f"[SKIP] {name} already completed")
             return
 
-        self.logger.info(f"[RUN] {name}")
-        func()
+        try:
+            self.logger.info(f"[START] {name}")
+            func()
+            self.resume.mark_stage_done(name)
+            self.logger.info(f"[DONE] {name}")
 
-        self.resume.mark_stage_done(name)
-        self.logger.info(f"[DONE] {name}")
+        except Exception as e:
+            self.logger.error(f"[FAIL] {name}: {e}")
+            raise
