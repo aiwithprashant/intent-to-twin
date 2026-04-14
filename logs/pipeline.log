@@ -25,3 +25,196 @@
 2026-04-13 17:41:35,539 | INFO | [SAVE] JSON saved at: /workspace/intent-to-twin/outputs/m1/scene_graph.json
 2026-04-13 17:41:35,539 | INFO | [M1] Scene graph saved successfully
 2026-04-13 17:41:35,540 | INFO | [DONE] m1
+2026-04-14 05:14:46,694 | INFO | ========== STAGE: m1 ==========
+2026-04-14 05:14:46,695 | INFO | [SKIP] m1 already completed
+2026-04-14 05:14:46,695 | INFO | ========== STAGE: m2 ==========
+2026-04-14 05:14:46,695 | INFO | [START] m2
+2026-04-14 05:14:46,696 | INFO | [M2] Loading scene graph from: /workspace/intent-to-twin/outputs/m1/scene_graph.json
+2026-04-14 05:14:46,697 | INFO | [M2] Mapping entities to IFC
+2026-04-14 05:14:46,697 | DEBUG | [M2] Mapped entities: [{'id': 'obj_0', 'name': 'room', 'ifc_class': 'IfcSpace'}, {'id': 'obj_1', 'name': 'door', 'ifc_class': 'IfcDoor'}, {'id': 'obj_2', 'name': 'window', 'ifc_class': 'IfcWindow'}, {'id': 'obj_3', 'name': 'pipe', 'ifc_class': 'IfcPipeSegment'}]
+2026-04-14 05:14:46,697 | INFO | [M2] Extracting constraints
+2026-04-14 05:14:46,697 | INFO | [M2] Extracting priors
+2026-04-14 05:14:46,702 | INFO | [SAVE] JSON saved at: /workspace/intent-to-twin/outputs/m2/knowledge_constraints.json
+2026-04-14 05:14:46,702 | INFO | [M2] Knowledge constraints generated
+2026-04-14 05:14:46,703 | INFO | [DONE] m2
+2026-04-14 05:24:59,574 | INFO | ========== STAGE: m1 ==========
+2026-04-14 05:24:59,576 | INFO | [SKIP] m1 already completed
+2026-04-14 05:24:59,576 | INFO | ========== STAGE: m2 ==========
+2026-04-14 05:24:59,577 | INFO | [SKIP] m2 already completed
+2026-04-14 05:35:02,579 | INFO | ========== STAGE: m3 ==========
+2026-04-14 05:35:02,581 | INFO | [START] m3
+2026-04-14 05:35:02,582 | INFO | [M3] Loading inputs
+2026-04-14 05:35:02,584 | INFO | [M3] Building prompt
+2026-04-14 05:35:02,584 | INFO | [M3] Prompt: A realistic 3D scene with: room, door, window, pipe. A door embedded in a wall.
+2026-04-14 05:35:02,584 | INFO | [M3] Generating multi-view images
+2026-04-14 05:35:09,549 | INFO | [M3] Generated images: ['/workspace/intent-to-twin/outputs/m3/images/view_0.png', '/workspace/intent-to-twin/outputs/m3/images/view_1.png', '/workspace/intent-to-twin/outputs/m3/images/view_2.png']
+2026-04-14 05:35:09,550 | INFO | [M3] Reconstructing 3D mesh
+2026-04-14 05:35:09,555 | INFO | [M3] Mesh saved: /workspace/intent-to-twin/outputs/m3/mesh/scene.ply
+2026-04-14 05:35:09,556 | INFO | [DONE] m3
+2026-04-14 05:40:01,038 | INFO | ========== STAGE: m1 ==========
+2026-04-14 05:40:01,039 | INFO | [SKIP] m1 already completed
+2026-04-14 05:40:01,039 | INFO | ========== STAGE: m2 ==========
+2026-04-14 05:40:01,040 | INFO | [SKIP] m2 already completed
+2026-04-14 05:40:28,546 | INFO | ========== STAGE: m3 ==========
+2026-04-14 05:40:28,548 | INFO | [SKIP] m3 already completed
+2026-04-14 05:40:28,548 | INFO | ========== STAGE: m4 ==========
+2026-04-14 05:40:28,548 | INFO | [START] m4
+2026-04-14 05:40:28,549 | INFO | [M4] Loading inputs
+2026-04-14 05:40:28,551 | INFO | [M4] Building object states
+2026-04-14 05:40:28,552 | INFO | [M4] Building relations
+2026-04-14 05:40:28,552 | INFO | [M4] Extracting geometry
+2026-04-14 05:40:28,554 | INFO | [M4] Building confidence scores
+2026-04-14 05:40:28,561 | INFO | [SAVE] JSON saved at: /workspace/intent-to-twin/outputs/m4/twin_state.json
+2026-04-14 05:40:28,561 | INFO | [M4] TwinState created successfully
+2026-04-14 05:40:28,562 | INFO | [DONE] m4
+2026-04-14 06:00:40,534 | INFO | ========== STAGE: m1 ==========
+2026-04-14 06:00:40,536 | INFO | [SKIP] m1 already completed
+2026-04-14 06:00:40,536 | INFO | ========== STAGE: m2 ==========
+2026-04-14 06:00:40,537 | INFO | [SKIP] m2 already completed
+2026-04-14 06:01:06,869 | INFO | ========== STAGE: m3 ==========
+2026-04-14 06:01:06,871 | INFO | [SKIP] m3 already completed
+2026-04-14 06:01:06,871 | INFO | ========== STAGE: m4 ==========
+2026-04-14 06:01:06,872 | INFO | [SKIP] m4 already completed
+2026-04-14 06:01:06,872 | INFO | ========== STAGE: m5 ==========
+2026-04-14 06:01:06,872 | INFO | [START] m5
+2026-04-14 06:01:06,873 | INFO | [M5] Loading TwinState
+2026-04-14 06:01:06,874 | INFO | [M5] Running error detection
+2026-04-14 06:01:06,874 | INFO | [M5] Total errors detected: 4
+2026-04-14 06:01:06,879 | INFO | [SAVE] JSON saved at: /workspace/intent-to-twin/outputs/m5/errors.json
+2026-04-14 06:01:06,880 | INFO | [M5] Error report generated
+2026-04-14 06:01:06,881 | INFO | [DONE] m5
+2026-04-14 06:03:43,890 | INFO | ========== STAGE: m1 ==========
+2026-04-14 06:03:43,891 | INFO | [SKIP] m1 already completed
+2026-04-14 06:03:43,891 | INFO | ========== STAGE: m2 ==========
+2026-04-14 06:03:43,892 | INFO | [SKIP] m2 already completed
+2026-04-14 06:04:10,696 | INFO | ========== STAGE: m3 ==========
+2026-04-14 06:04:10,698 | INFO | [SKIP] m3 already completed
+2026-04-14 06:04:10,698 | INFO | ========== STAGE: m4 ==========
+2026-04-14 06:04:10,698 | INFO | [SKIP] m4 already completed
+2026-04-14 06:04:10,699 | INFO | ========== STAGE: m5 ==========
+2026-04-14 06:04:10,699 | INFO | [SKIP] m5 already completed
+2026-04-14 06:04:10,699 | INFO | ========== STAGE: m6 ==========
+2026-04-14 06:04:10,701 | INFO | [START] m6
+2026-04-14 06:04:10,702 | INFO | [M6] Loading inputs
+2026-04-14 06:04:10,704 | INFO | [M6] Applying geometry corrections
+2026-04-14 06:04:10,704 | INFO | [M6] Updating state
+2026-04-14 06:04:10,709 | INFO | [SAVE] JSON saved at: /workspace/intent-to-twin/outputs/m6/updated_state.json
+2026-04-14 06:04:10,709 | INFO | [M6] Correction applied successfully
+2026-04-14 06:04:10,711 | INFO | [DONE] m6
+2026-04-14 06:10:10,051 | INFO | ===== M1: Intent Parsing =====
+2026-04-14 06:10:15,711 | INFO | ========== STAGE: m1 ==========
+2026-04-14 06:10:15,712 | INFO | [SKIP] m1 already completed
+2026-04-14 06:10:15,712 | INFO | ===== M2: Ontology Engine =====
+2026-04-14 06:10:15,712 | INFO | ========== STAGE: m2 ==========
+2026-04-14 06:10:15,713 | INFO | [SKIP] m2 already completed
+2026-04-14 06:10:15,713 | INFO | ===== Initializing M3–M6 Engines =====
+2026-04-14 06:10:42,206 | INFO | ===== M7: Iterative Loop =====
+2026-04-14 06:10:42,206 | INFO | [M7] Starting iterative loop
+2026-04-14 06:10:42,207 | INFO | [M7] Iteration 0
+2026-04-14 06:10:42,208 | INFO | [M3] Loading inputs
+2026-04-14 06:10:42,211 | INFO | [M3] Building prompt
+2026-04-14 06:10:42,211 | INFO | [M3] Prompt: A realistic 3D scene with: room, door, window, pipe. A door embedded in a wall.
+2026-04-14 06:10:42,211 | INFO | [M3] Generating multi-view images
+2026-04-14 06:10:49,041 | INFO | [M3] Generated images: ['/workspace/intent-to-twin/outputs/iter_0/m3/images/view_0.png', '/workspace/intent-to-twin/outputs/iter_0/m3/images/view_1.png', '/workspace/intent-to-twin/outputs/iter_0/m3/images/view_2.png']
+2026-04-14 06:10:49,041 | INFO | [M3] Reconstructing 3D mesh
+2026-04-14 06:10:49,046 | INFO | [M3] Mesh saved: /workspace/intent-to-twin/outputs/iter_0/m3/mesh/scene.ply
+2026-04-14 06:10:49,046 | INFO | [M4] Loading inputs
+2026-04-14 06:10:49,048 | INFO | [M4] Building object states
+2026-04-14 06:10:49,048 | INFO | [M4] Building relations
+2026-04-14 06:10:49,049 | INFO | [M4] Extracting geometry
+2026-04-14 06:10:49,050 | INFO | [M4] Building confidence scores
+2026-04-14 06:10:49,055 | INFO | [SAVE] JSON saved at: /workspace/intent-to-twin/outputs/iter_0/m4/twin_state.json
+2026-04-14 06:10:49,055 | INFO | [M4] TwinState created successfully
+2026-04-14 06:10:49,056 | INFO | [M5] Loading TwinState
+2026-04-14 06:10:49,057 | INFO | [M5] Running error detection
+2026-04-14 06:10:49,057 | INFO | [M5] Total errors detected: 4
+2026-04-14 06:10:49,061 | INFO | [SAVE] JSON saved at: /workspace/intent-to-twin/outputs/iter_0/m5/errors.json
+2026-04-14 06:10:49,061 | INFO | [M5] Error report generated
+2026-04-14 06:10:49,064 | INFO | [M6] Loading inputs
+2026-04-14 06:10:49,066 | INFO | [M6] Applying geometry corrections
+2026-04-14 06:10:49,066 | INFO | [M6] Updating state
+2026-04-14 06:10:49,071 | INFO | [SAVE] JSON saved at: /workspace/intent-to-twin/outputs/iter_0/m6/updated_state.json
+2026-04-14 06:10:49,071 | INFO | [M6] Correction applied successfully
+2026-04-14 06:10:49,071 | INFO | [M7] Iteration 1
+2026-04-14 06:10:49,072 | INFO | [M3] Loading inputs
+2026-04-14 06:10:49,074 | INFO | [M3] Building prompt
+2026-04-14 06:10:49,074 | INFO | [M3] Prompt: A realistic 3D scene with: room, door, window, pipe. A door embedded in a wall.
+2026-04-14 06:10:49,074 | INFO | [M3] Generating multi-view images
+2026-04-14 06:10:55,526 | INFO | [M3] Generated images: ['/workspace/intent-to-twin/outputs/iter_1/m3/images/view_0.png', '/workspace/intent-to-twin/outputs/iter_1/m3/images/view_1.png', '/workspace/intent-to-twin/outputs/iter_1/m3/images/view_2.png']
+2026-04-14 06:10:55,526 | INFO | [M3] Reconstructing 3D mesh
+2026-04-14 06:10:55,530 | INFO | [M3] Mesh saved: /workspace/intent-to-twin/outputs/iter_1/m3/mesh/scene.ply
+2026-04-14 06:10:55,531 | INFO | [M4] Loading inputs
+2026-04-14 06:10:55,533 | INFO | [M4] Building object states
+2026-04-14 06:10:55,534 | INFO | [M4] Building relations
+2026-04-14 06:10:55,534 | INFO | [M4] Extracting geometry
+2026-04-14 06:10:55,536 | INFO | [M4] Building confidence scores
+2026-04-14 06:10:55,541 | INFO | [SAVE] JSON saved at: /workspace/intent-to-twin/outputs/iter_1/m4/twin_state.json
+2026-04-14 06:10:55,541 | INFO | [M4] TwinState created successfully
+2026-04-14 06:10:55,542 | INFO | [M5] Loading TwinState
+2026-04-14 06:10:55,544 | INFO | [M5] Running error detection
+2026-04-14 06:10:55,544 | INFO | [M5] Total errors detected: 4
+2026-04-14 06:10:55,549 | INFO | [SAVE] JSON saved at: /workspace/intent-to-twin/outputs/iter_1/m5/errors.json
+2026-04-14 06:10:55,549 | INFO | [M5] Error report generated
+2026-04-14 06:10:55,552 | INFO | [M6] Loading inputs
+2026-04-14 06:10:55,554 | INFO | [M6] Applying geometry corrections
+2026-04-14 06:10:55,554 | INFO | [M6] Updating state
+2026-04-14 06:10:55,559 | INFO | [SAVE] JSON saved at: /workspace/intent-to-twin/outputs/iter_1/m6/updated_state.json
+2026-04-14 06:10:55,559 | INFO | [M6] Correction applied successfully
+2026-04-14 06:10:55,559 | INFO | ===== PIPELINE FINISHED =====
+2026-04-14 06:18:10,141 | INFO | ===== M1: Intent Parsing =====
+2026-04-14 06:18:15,403 | INFO | ========== STAGE: m1 ==========
+2026-04-14 06:18:15,404 | INFO | [SKIP] m1 already completed
+2026-04-14 06:18:15,404 | INFO | ===== M2: Ontology Engine =====
+2026-04-14 06:18:15,404 | INFO | ========== STAGE: m2 ==========
+2026-04-14 06:18:15,405 | INFO | [SKIP] m2 already completed
+2026-04-14 06:18:15,405 | INFO | ===== Initializing M3–M6 Engines =====
+2026-04-14 06:18:42,512 | INFO | ===== M7: Iterative Loop =====
+2026-04-14 06:18:42,513 | INFO | [M7] Starting iterative loop
+2026-04-14 06:18:42,513 | INFO | [M7] Iteration 0
+2026-04-14 06:18:42,514 | INFO | [M3] Output exists, skipping
+2026-04-14 06:18:42,515 | INFO | [M4] Output exists, skipping
+2026-04-14 06:18:42,516 | INFO | [M5] Output exists, skipping
+2026-04-14 06:18:42,517 | INFO | [M6] Output exists, skipping
+2026-04-14 06:18:42,517 | INFO | [M7] Updating scene graph for next iteration
+2026-04-14 06:18:42,523 | INFO | [M7] Scene graph updated: /workspace/intent-to-twin/outputs/iter_0/scene_graph_updated.json
+2026-04-14 06:18:42,524 | INFO | [M7] Iteration 1
+2026-04-14 06:18:42,525 | INFO | [M3] Output exists, skipping
+2026-04-14 06:18:42,526 | INFO | [M4] Output exists, skipping
+2026-04-14 06:18:42,526 | INFO | [M5] Output exists, skipping
+2026-04-14 06:18:42,528 | INFO | [M6] Output exists, skipping
+2026-04-14 06:18:42,528 | INFO | [M7] Updating scene graph for next iteration
+2026-04-14 06:18:42,534 | INFO | [M7] Scene graph updated: /workspace/intent-to-twin/outputs/iter_1/scene_graph_updated.json
+2026-04-14 06:18:42,536 | INFO | [FINAL] Using iteration: iter_1
+2026-04-14 06:18:42,551 | INFO | [SAVE] JSON saved at: /workspace/intent-to-twin/outputs/final/evaluation_report.json
+2026-04-14 06:18:42,551 | INFO | [FINAL] Final outputs generated
+2026-04-14 06:18:42,551 | INFO | ===== PIPELINE FINISHED =====
+2026-04-14 06:22:02,816 | INFO | ===== M1: Intent Parsing =====
+2026-04-14 06:22:08,127 | INFO | ========== STAGE: m1 ==========
+2026-04-14 06:22:08,128 | INFO | [SKIP] m1 already completed
+2026-04-14 06:22:08,128 | INFO | ===== M2: Ontology Engine =====
+2026-04-14 06:22:08,129 | INFO | ========== STAGE: m2 ==========
+2026-04-14 06:22:08,129 | INFO | [SKIP] m2 already completed
+2026-04-14 06:22:08,129 | INFO | ===== Initializing M3–M6 Engines =====
+2026-04-14 06:22:35,175 | INFO | ===== M7: Iterative Loop =====
+2026-04-14 06:22:35,176 | INFO | [M7] Starting iterative loop
+2026-04-14 06:22:35,176 | INFO | [M7] Iteration 0
+2026-04-14 06:22:35,177 | INFO | [M3] Output exists, skipping
+2026-04-14 06:22:35,177 | INFO | [M4] Output exists, skipping
+2026-04-14 06:22:35,178 | INFO | [M5] Output exists, skipping
+2026-04-14 06:22:35,179 | INFO | [M6] Output exists, skipping
+2026-04-14 06:22:35,179 | INFO | [M7] Updating scene graph for next iteration
+2026-04-14 06:22:35,185 | INFO | [M7] Scene graph updated: /workspace/intent-to-twin/outputs/iter_0/scene_graph_updated.json
+2026-04-14 06:22:35,186 | INFO | [M7] Iteration 1
+2026-04-14 06:22:35,186 | INFO | [M3] Output exists, skipping
+2026-04-14 06:22:35,187 | INFO | [M4] Output exists, skipping
+2026-04-14 06:22:35,187 | INFO | [M5] Output exists, skipping
+2026-04-14 06:22:35,189 | INFO | [M6] Output exists, skipping
+2026-04-14 06:22:35,189 | INFO | [M7] Updating scene graph for next iteration
+2026-04-14 06:22:35,194 | INFO | [M7] Scene graph updated: /workspace/intent-to-twin/outputs/iter_1/scene_graph_updated.json
+2026-04-14 06:22:35,196 | INFO | [FINAL] Using iteration: iter_1
+2026-04-14 06:22:35,214 | INFO | [SAVE] JSON saved at: /workspace/intent-to-twin/outputs/final/evaluation_report.json
+2026-04-14 06:22:35,214 | INFO | [FINAL] Final outputs generated
+2026-04-14 06:22:35,215 | INFO | ===== PIPELINE FINISHED =====
+2026-04-14 06:22:35,216 | INFO | [EVAL] Starting evaluation
+2026-04-14 06:22:35,224 | INFO | [SAVE] JSON saved at: /workspace/intent-to-twin/outputs/final/metrics.json
+2026-04-14 06:22:35,224 | INFO | [EVAL] Metrics computed: {'error_reduction': 0.0, 'final_validity': 0.0, 'convergence_steps': 2, 'constraint_satisfaction': -0.33333333333333326}

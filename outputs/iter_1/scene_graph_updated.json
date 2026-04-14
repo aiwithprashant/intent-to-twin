@@ -1,0 +1,61 @@
+{
+    "objects": [
+        {
+            "id": "obj_0",
+            "name": "room",
+            "attributes": {
+                "position": [
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            }
+        },
+        {
+            "id": "obj_1",
+            "name": "door",
+            "attributes": {
+                "position": [
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            }
+        },
+        {
+            "id": "obj_2",
+            "name": "window",
+            "attributes": {
+                "position": [
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            }
+        },
+        {
+            "id": "obj_3",
+            "name": "pipe",
+            "attributes": {
+                "position": [
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            }
+        }
+    ],
+    "relations": [
+        {
+            "subject": "obj_0",
+            "predicate": "related_to",
+            "object": "obj_1"
+        }
+    ],
+    "confidence": {
+        "obj_0": 0.5,
+        "obj_1": 0.5,
+        "obj_2": 0.5,
+        "obj_3": 0.5
+    }
+}

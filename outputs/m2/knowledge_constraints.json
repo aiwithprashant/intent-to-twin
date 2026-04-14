@@ -1,0 +1,63 @@
+{
+    "mapped_entities": [
+        {
+            "id": "obj_0",
+            "name": "room",
+            "ifc_class": "IfcSpace"
+        },
+        {
+            "id": "obj_1",
+            "name": "door",
+            "ifc_class": "IfcDoor"
+        },
+        {
+            "id": "obj_2",
+            "name": "window",
+            "ifc_class": "IfcWindow"
+        },
+        {
+            "id": "obj_3",
+            "name": "pipe",
+            "ifc_class": "IfcPipeSegment"
+        }
+    ],
+    "constraints": [
+        {
+            "type": "containment",
+            "rule": "door must be inside wall",
+            "target": "obj_1",
+            "required_parent": "IfcWall"
+        },
+        {
+            "type": "containment",
+            "rule": "window must be inside wall",
+            "target": "obj_2",
+            "required_parent": "IfcWall"
+        },
+        {
+            "type": "connectivity",
+            "rule": "pipe must connect to structure",
+            "target": "obj_3"
+        }
+    ],
+    "priors": [
+        {
+            "target": "obj_1",
+            "height_range": [
+                2.0,
+                2.2
+            ],
+            "width_range": [
+                0.8,
+                1.2
+            ]
+        }
+    ],
+    "relations": [
+        {
+            "subject": "obj_0",
+            "predicate": "related_to",
+            "object": "obj_1"
+        }
+    ]
+}

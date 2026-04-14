@@ -4,3 +4,11 @@ spacy
 transformers 
 accelerate 
 huggingface_hub
+ifcopenshell
+torch
+diffusers 
+safetensors 
+opencv-python 
+open3d
+scikit-learn
+pandas
