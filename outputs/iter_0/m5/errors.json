@@ -1,0 +1,26 @@
+[
+    {
+        "type": "containment",
+        "object": "obj_1",
+        "severity": "high",
+        "message": "obj_1 not inside IfcWall"
+    },
+    {
+        "type": "containment",
+        "object": "obj_2",
+        "severity": "high",
+        "message": "obj_2 not inside IfcWall"
+    },
+    {
+        "type": "relation",
+        "object": "obj_1",
+        "severity": "medium",
+        "message": "Missing required relation"
+    },
+    {
+        "type": "relation",
+        "object": "obj_2",
+        "severity": "medium",
+        "message": "Missing required relation"
+    }
+]

@@ -1,0 +1,122 @@
+{
+    "objects": [
+        {
+            "id": "obj_0",
+            "name": "room",
+            "ifc_class": "IfcSpace",
+            "position": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "bbox": [
+                0,
+                0,
+                0,
+                1,
+                1,
+                1
+            ]
+        },
+        {
+            "id": "obj_1",
+            "name": "door",
+            "ifc_class": "IfcDoor",
+            "position": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "bbox": [
+                0,
+                0,
+                0,
+                1,
+                1,
+                1
+            ]
+        },
+        {
+            "id": "obj_2",
+            "name": "window",
+            "ifc_class": "IfcWindow",
+            "position": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "bbox": [
+                0,
+                0,
+                0,
+                1,
+                1,
+                1
+            ]
+        },
+        {
+            "id": "obj_3",
+            "name": "pipe",
+            "ifc_class": "IfcPipeSegment",
+            "position": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "bbox": [
+                0,
+                0,
+                0,
+                1,
+                1,
+                1
+            ]
+        }
+    ],
+    "relations": [
+        {
+            "subject": "obj_0",
+            "predicate": "related_to",
+            "object": "obj_1"
+        }
+    ],
+    "geometry": {
+        "num_vertices": 762,
+        "num_triangles": 1520,
+        "bbox_min": [
+            -1.0,
+            -1.0,
+            -1.0
+        ],
+        "bbox_max": [
+            1.0,
+            1.0,
+            1.0
+        ]
+    },
+    "constraints": [
+        {
+            "type": "containment",
+            "rule": "door must be inside wall",
+            "target": "obj_1",
+            "required_parent": "IfcWall"
+        },
+        {
+            "type": "containment",
+            "rule": "window must be inside wall",
+            "target": "obj_2",
+            "required_parent": "IfcWall"
+        },
+        {
+            "type": "connectivity",
+            "rule": "pipe must connect to structure",
+            "target": "obj_3"
+        }
+    ],
+    "confidence": {
+        "obj_0": 0.5,
+        "obj_1": 0.5,
+        "obj_2": 0.5,
+        "obj_3": 0.5
+    }
+}

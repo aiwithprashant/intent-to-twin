@@ -1,0 +1,8 @@
+{
+    "iterations": 2,
+    "error_reduction": [
+        4,
+        4
+    ],
+    "final_status": "partial"
+}
